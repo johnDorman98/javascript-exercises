@@ -1,13 +1,17 @@
-const removeFromArray = function(arr, elementToRemove) {
-    updatedArr = []   
+const removeFromArray = function(arr, ...elementsToRemove) {
+  // Loop based approach
+  // updatedArr = []   
+    
+    // arr.forEach(element => {
+    //     if (!elementsToRemove.includes(element)) {
+    //       updatedArr.push(element)
+    //     }
+    // });
 
-    arr.forEach(element => {
-        if (element !== elementToRemove) {
-          updatedArr.push(element)
-        }
-    });
+    // return updatedArr
 
-    return updatedArr
+    // Filter based approach
+    return arr.filter(element => !elementsToRemove.includes(element))
 };
 
 // Do not edit below this line
